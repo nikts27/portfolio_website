@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-// Ορίζουμε τις δεξιότητες μας, αυτή τη φορά σε κατηγορίες
 const skillCategories = [
     {
         title: 'Languages',
