@@ -19,7 +19,7 @@ export default function Navbar() {
                             className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors"
                         >
                             <Image
-                                src="/logo.svg"
+                                src="/icons/logo.svg"
                                 alt="Nikolaos Tsaridis Logo"
                                 width={40}
                                 height={40}

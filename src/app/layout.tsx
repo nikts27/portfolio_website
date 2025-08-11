@@ -9,10 +9,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: {
-        template: '%s | Nikolaos Tsaridis',
-        default: 'Nikolaos Tsaridis',
-    },
     description: 'Personal portfolio of Nikolaos Tsaridis, a software developer specializing in full-stack applications with React, Next.js, Spring Boot, and Python.'
 };
 
@@ -21,14 +17,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-       <body className={`${inter.className} antialiased`}>
-         <ThemeProvider>
-           <Navbar />
-           <main>{children}</main>
-         </ThemeProvider>
-       </body>
-    </html>
-  );
+    return (
+        <html lang="en" suppressHydrationWarning>
+        <body className={`${inter.className} antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100`}>
+        <ThemeProvider>
+            <Navbar/>
+            <main>{children}</main>
+        </ThemeProvider>
+        </body>
+        </html>
+    );
 }
