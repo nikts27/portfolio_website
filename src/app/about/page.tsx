@@ -54,9 +54,9 @@ export default function Page() {
         <div className="max-w-5xl mx-auto px-4 py-16">
             <section className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{opacity: 0, scale: 0.8}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.5}}
                     className="md:col-span-1 flex justify-center"
                 >
                     <Image
@@ -64,20 +64,22 @@ export default function Page() {
                         alt="Nikolaos Tsaridis"
                         width={250}
                         height={250}
-                        className="object-cover shadow-lg"
+                        className="rounded-lg object-cover shadow-lg"
                     />
                 </motion.div>
                 <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="md:col-span-2"
+                    initial={{opacity: 0, x: 20}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{duration: 0.5, delay: 0.2}}
+                    className="md:col-span-2 flex flex-col justify-center"
                 >
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
                         A Bit About Me
                     </h1>
                     <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-                        I am a final-year Applied Informatics student at the University of Macedonia, passionate about building complete software solutions. With strong problem-solving skills and a commitment to continuous learning, I enjoy tackling challenges and collaborating in team environments.
+                        I am a final-year Applied Informatics student at the University of Macedonia, passionate about
+                        building complete software solutions. With strong problem-solving skills and a commitment to
+                        continuous learning, I enjoy tackling challenges and collaborating in team environments.
                     </p>
                 </motion.div>
             </section>
@@ -88,9 +90,9 @@ export default function Page() {
                     {skillCategories.map((category) => (
                         <motion.div
                             key={category.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.5}}
                         >
                             <h3 className="text-xl font-semibold text-center text-gray-800 dark:text-gray-200 mb-6">{category.title}</h3>
                             <div className="flex flex-wrap justify-center items-center gap-8">
@@ -109,7 +111,8 @@ export default function Page() {
                                             height={48}
                                             className="transition-transform duration-300 group-hover:scale-110"
                                         />
-                                        <span className="text-sm text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <span
+                                            className="text-sm text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {skill.name}
                     </span>
                                     </a>
@@ -123,8 +126,33 @@ export default function Page() {
             <section className="mt-24 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter">Beyond the Code</h2>
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    When I'm not programming, I enjoy playing sports and chess, going to the gym, and diving into video games.
+                    When I'm not typing away, you'll probably find me planning my next move in a game of chess,
+                    a challenge I love for its strategic nature. I am also a fan of team sports and video games,
+                    where cooperation and problem solving are key.
+                    The gym and running are my way of clearing my mind and getting ready for the next challenge in code.
                 </p>
+            </section>
+
+            <section className="mt-24 text-center">
+                <h2 className="text-3xl font-bold tracking-tighter">Let's Connect</h2>
+                <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    I'm always excited to discuss new projects or opportunities. Feel free to explore my work or get in
+                    touch.
+                </p>
+                <div className="mt-8 flex justify-center gap-4">
+                    <a
+                        href="/projects"
+                        className="bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors"
+                    >
+                        See My Projects
+                    </a>
+                    <a
+                        href="/contact"
+                        className="border border-gray-900 text-gray-900 dark:border-white dark:text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    >
+                        Contact Me
+                    </a>
+                </div>
             </section>
         </div>
     );
