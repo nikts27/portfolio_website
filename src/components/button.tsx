@@ -32,6 +32,7 @@ export function Button({children, className, variant = 'primary', href, download
                 className={combinedClasses}
                 target={target}
                 download={download}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 {...(rest as any)}
             >
                 {children}

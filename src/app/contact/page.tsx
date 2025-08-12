@@ -60,7 +60,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.5 }}
                 className="text-center"
             >
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Let's Build Something Together</h1>
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Let&apos;s Build Something Together</h1>
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                     Have a project/opportunity in mind or just want to connect? Drop me a line below or find me on social media.
                     If you want, you can also call me on +30 698-664-2104.

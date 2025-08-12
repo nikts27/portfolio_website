@@ -127,7 +127,7 @@ export default function AboutPage() {
             <section className="mt-24 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter">Beyond the Code</h2>
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    When I'm not typing away, you'll probably find me planning my next move in a game of chess,
+                    When I&apos;m not typing away, you&apos;ll probably find me planning my next move in a game of chess,
                     a challenge I love for its strategic nature. I am also a fan of team sports and video games,
                     where cooperation and problem solving are key.
                     The gym and running are my way of clearing my mind and getting ready for the next challenge in code.
@@ -135,9 +135,9 @@ export default function AboutPage() {
             </section>
 
             <section className="mt-24 text-center">
-                <h2 className="text-3xl font-bold tracking-tighter">Let's Connect</h2>
+                <h2 className="text-3xl font-bold tracking-tighter">Let&apos;s Connect</h2>
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    I'm always excited to discuss new projects or opportunities. Feel free to explore my work or get in
+                    I&apos;m always excited to discuss new projects or opportunities. Feel free to explore my work or get in
                     touch.
                 </p>
                 <div className="mt-8 flex justify-center gap-4">

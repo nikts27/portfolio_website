@@ -59,7 +59,7 @@ export default function ProjectsPage() {
             >
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">My Work</h1>
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    Here are some of the projects I've worked on. Each one represents a unique challenge and a learning opportunity.
+                    Here are some of the projects I&apos;ve worked on. Each one represents a unique challenge and a learning opportunity.
                 </p>
             </motion.section>
 
