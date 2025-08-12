@@ -114,8 +114,8 @@ export default function AboutPage() {
                                         />
                                         <span
                                             className="text-sm text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {skill.name}
-                    </span>
+                                            {skill.name}
+                                        </span>
                                     </a>
                                 ))}
                             </div>

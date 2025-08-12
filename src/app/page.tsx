@@ -11,7 +11,7 @@ export default function Home() {
   }, []);
 
   return (
-      <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="max-w-4xl text-left p-8">
 
           <motion.div
@@ -64,6 +64,7 @@ export default function Home() {
                   alt="LinkedIn button"
                   height={20}
                   width={20}
+                  className="m-1"
               />
               →
             </Button>

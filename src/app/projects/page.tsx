@@ -70,21 +70,24 @@ export default function ProjectsPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden flex flex-col"
+                        whileHover={{ y: -5 }} // <-- 1. Προσθέτουμε το hover effect
+                        className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden flex flex-col group"
                     >
-                        <Image
-                            src={project.image}
-                            alt={`${project.title} screenshot`}
-                            width={600}
-                            height={350}
-                            className="object-cover w-full h-48"
-                        />
+                        <div className="overflow-hidden">
+                            <Image
+                                src={project.image}
+                                alt={`${project.title} screenshot`}
+                                width={600}
+                                height={350}
+                                className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105" // <-- Bonus: Zoom στην εικόνα
+                            />
+                        </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <h2 className="text-2xl font-bold">{project.title}</h2>
                             <p className="mt-2 text-gray-600 dark:text-gray-300 flex-grow">{project.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="bg-gray-100 dark:bg-gray-800 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+                                    <span key={tag} className="bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
                                 ))}
                             </div>
                             <div className="mt-6 flex items-center gap-4">

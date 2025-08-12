@@ -1,14 +1,17 @@
 // src/components/Button.tsx
 import clsx from 'clsx';
 import Link from 'next/link';
+import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    children: React.ReactNode;
-    variant?: 'primary' | 'secondary';
-    href?: string;
+    children: React.ReactNode,
+    variant?: 'primary' | 'secondary',
+    href?: string,
+    download?: string,
+    target?: string
 }
 
-export function Button({ children, className, variant = 'primary', href, ...rest }: ButtonProps) {
+export function Button({children, className, variant = 'primary', href, download, target, ...rest}: ButtonProps) {
     const baseClasses = 'flex items-center justify-center font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg disabled:opacity-50';
 
     const variantClasses = {
@@ -24,7 +27,13 @@ export function Button({ children, className, variant = 'primary', href, ...rest
 
     if (href) {
         return (
-            <Link href={href} className={combinedClasses} {...(rest as any)}>
+            <Link
+                href={href}
+                className={combinedClasses}
+                target={target}
+                download={download}
+                {...(rest as any)}
+            >
                 {children}
             </Link>
         );

@@ -2,9 +2,9 @@
 
 import {
     HomeIcon,
-    BriefcaseIcon,       // Αντί για DocumentDuplicateIcon
-    UserIcon,              // Αντί για UserGroupIcon
-    EnvelopeIcon,          // Για το Contact
+    BriefcaseIcon,
+    UserIcon,
+    EnvelopeIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";

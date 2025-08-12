@@ -67,20 +67,33 @@ export default function ContactPage() {
                 </p>
 
                 <div className="mt-8 flex justify-center gap-6">
-                    <a href="https://www.linkedin.com/in/ntsaridis/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+                    <a
+                        href="https://www.linkedin.com/in/ntsaridis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-blue-600 group"
+                    >
                         <Image
                             src="linkedin2.svg"
                             alt="LinkedIn Icon"
                             width={80}
                             height={80}
+                            className="transition-transform duration-300 group-hover:scale-110"
                         />
                     </a>
-                    <a href="https://www.instagram.com/nikos_tsaridis/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-600">
+
+                    <a
+                        href="https://www.instagram.com/nikos_tsaridis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-pink-600 group"
+                    >
                         <Image
                             src="/icons/instagram.svg"
                             alt="Instagram Icon"
                             width={80}
                             height={80}
+                            className="transition-transform duration-300 group-hover:scale-110"
                         />
                     </a>
                 </div>
