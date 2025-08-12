@@ -3,6 +3,7 @@
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {useEffect} from "react";
+import {Button} from "@/components/button";
 
 export default function Home() {
   useEffect(() => {
@@ -53,25 +54,24 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-12 flex items-center space-x-6"
           >
-            <a
+            <Button
                 href="https://www.linkedin.com/in/ntsaridis/"
-                className="bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors"
+                variant="primary"
             >
-              <div className="flex items-center justify-between gap-2">
-                Connect with me in
-                <Image
-                    src="/icons/linkedin.svg"
-                    alt="LinkedIn button"
-                    height={20}
-                    width={20}
-                />
-                →
-              </div>
-            </a>
-            <a
+              Connect with me in
+              <Image
+                  src="/icons/linkedin.svg"
+                  alt="LinkedIn button"
+                  height={20}
+                  width={20}
+              />
+              →
+            </Button>
+
+            <Button
                 href="/CV-NIKOLAOS-TSARIDIS.pdf"
+                variant="secondary"
                 download="CV-Nikolaos-Tsaridis.pdf"
-                className="border border-gray-900 text-gray-900 dark:border-white dark:text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               <div className="flex items-center justify-between gap-2">
                 Download my CV
@@ -82,7 +82,7 @@ export default function Home() {
                     width={20}
                 />
               </div>
-            </a>
+            </Button>
           </motion.div>
         </div>
       </div>

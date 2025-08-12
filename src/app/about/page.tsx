@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import {Button} from "@/components/button";
 
 const skillCategories = [
     {
@@ -10,6 +11,7 @@ const skillCategories = [
         skills: [
             { name: 'Java', logo: '/icons/java.svg', href: 'https://dev.java/' },
             { name: 'Python', logo: '/icons/python.svg', href: 'https://www.python.org/doc/' },
+            { name: 'C', logo: '/icons/c.svg', href: 'https://devdocs.io/c/' },
             { name: 'JavaScript', logo: '/icons/js.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
             { name: 'Solidity', logo: '/icons/solidity.svg', href: 'https://soliditylang.org/' },
         ]
@@ -18,8 +20,8 @@ const skillCategories = [
         title: 'Frameworks & Libraries',
         skills: [
             { name: 'React.js', logo: '/icons/react.svg', href: 'https://react.dev/' },
+            { name: 'Next.js', logo: '/icons/next.svg', href: 'https://nextjs.org/docs' },
             { name: 'Spring Boot', logo: '/icons/spring.svg', href: 'https://spring.io/projects/spring-boot' },
-            { name: 'Tailwind CSS', logo: '/icons/tailwind.svg', href: 'https://tailwindcss.com/docs' },
         ]
     },
     {
@@ -28,6 +30,7 @@ const skillCategories = [
             { name: 'MongoDB', logo: '/icons/mongo.svg', href: 'https://www.mongodb.com/docs/' },
             { name: 'SQL', logo: '/icons/sql.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/SQL' },
             { name: 'HTML', logo: '/icons/html.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+            { name: 'Tailwind CSS', logo: '/icons/tailwind.svg', href: 'https://tailwindcss.com/docs' },
         ]
     },
     {
@@ -43,7 +46,7 @@ const skillCategories = [
     }
 ];
 
-export default function Page() {
+export default function AboutPage() {
     useEffect(() => {
         document.title = 'About | Nikolaos Tsaridis';
     }, []);
@@ -138,18 +141,12 @@ export default function Page() {
                     touch.
                 </p>
                 <div className="mt-8 flex justify-center gap-4">
-                    <a
-                        href="/projects"
-                        className="bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors"
-                    >
-                        See My Projects
-                    </a>
-                    <a
-                        href="/contact"
-                        className="border border-gray-900 text-gray-900 dark:border-white dark:text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    >
-                        Contact Me
-                    </a>
+                    <Button href="/projects" variant="primary">
+                        See my projects
+                    </Button>
+                    <Button href="/contact" variant="secondary">
+                        Contact me
+                    </Button>
                 </div>
             </section>
         </div>

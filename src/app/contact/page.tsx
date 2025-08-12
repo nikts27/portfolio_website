@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from "next/image";
 import clsx from "clsx";
+import {Button} from "@/components/button";
 
 export default function ContactPage() {
     const [status, setStatus] = useState('');
@@ -61,7 +62,7 @@ export default function ContactPage() {
             >
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Let's Build Something Together</h1>
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    Have a project in mind or just want to connect? Drop me a line below or find me on social media.
+                    Have a project/opportunity in mind or just want to connect? Drop me a line below or find me on social media.
                     If you want, you can also call me on +30 698-664-2104.
                 </p>
 
@@ -125,13 +126,14 @@ export default function ContactPage() {
           ></textarea>
                 </div>
                 <div>
-                    <button type="submit" disabled={status === 'sending'} className="w-full bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg
-                       transition-all duration-300 ease-in-out
-                       hover:bg-gray-700 hover:scale-105 hover:shadow-lg
-                       disabled:opacity-50"
+                    <Button
+                        type="submit"
+                        variant="primary"
+                        disabled={status === 'sending'}
+                        className="w-full"
                     >
                         {status === 'sending' ? 'Sending...' : 'Send Message'}
-                    </button>
+                    </Button>
                 </div>
                 {status === 'success' && <p className="text-green-600 text-center">Message sent successfully!</p>}
                 {status === 'error' && <p className="text-red-600 text-center">Something went wrong. Please try again.</p>}
