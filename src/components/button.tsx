@@ -4,19 +4,38 @@ import Link from 'next/link';
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    children: React.ReactNode,
-    variant?: 'primary' | 'secondary',
-    href?: string,
-    download?: string,
-    target?: string
+    children: React.ReactNode;
+    variant?: 'primary' | 'secondary';
+    href?: string;
+    download?: string;
+    target?: string;
 }
 
-export function Button({children, className, variant = 'primary', href, download, target, ...rest}: ButtonProps) {
-    const baseClasses = 'flex items-center justify-center font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg disabled:opacity-50';
+export function Button({children, className, variant = 'primary',
+                           href, download, target, ...rest}: ButtonProps) {
 
-    const variantClasses = {
-        primary: 'bg-gray-900 text-white hover:bg-gray-700',
-        secondary: 'border border-gray-900 text-gray-900 dark:border-white dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800',
+    const baseClasses = `
+    flex items-center justify-center font-semibold py-3 px-6 rounded-lg
+    transition-all duration-300 ease-in-out
+    hover:scale-105 hover:shadow-lg
+    disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
+    focus:outline-none focus:ring-2 focus:ring-offset-2
+    active:scale-95
+  `;
+
+    const variantClasses: Record<'primary' | 'secondary', string> = {
+        primary: `
+      bg-[var(--primary)] text-white 
+      hover:opacity-90
+      shadow-md hover:shadow-xl
+      focus:ring-blue-500
+    `,
+        secondary: `
+      border-2 border-[var(--foreground)] text-[var(--foreground)] 
+      bg-transparent
+      hover:bg-[var(--secondary)]
+      focus:ring-gray-500
+    `,
     };
 
     const combinedClasses = clsx(
@@ -30,10 +49,8 @@ export function Button({children, className, variant = 'primary', href, download
             <Link
                 href={href}
                 className={combinedClasses}
-                target={target}
                 download={download}
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                {...(rest as any)}
+                target={target}
             >
                 {children}
             </Link>
@@ -41,10 +58,7 @@ export function Button({children, className, variant = 'primary', href, download
     }
 
     return (
-        <button
-            {...rest}
-            className={combinedClasses}
-        >
+        <button className={combinedClasses} {...rest}>
             {children}
         </button>
     );

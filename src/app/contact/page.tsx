@@ -61,7 +61,7 @@ export default function ContactPage() {
                 className="text-center"
             >
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Let&apos;s Build Something Together</h1>
-                <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-4 text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
                     Have a project/opportunity in mind or just want to connect? Drop me a line below or find me on social media.
                     If you want, you can also call me on +30 698-664-2104.
                 </p>
@@ -96,13 +96,28 @@ export default function ContactPage() {
                             className="transition-transform duration-300 group-hover:scale-110"
                         />
                     </a>
+
+                    <a
+                        href="https://github.com/nikts27/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-pink-600 group"
+                    >
+                        <Image
+                            src="/icons/git.svg"
+                            alt="GitHub Icon"
+                            width={80}
+                            height={80}
+                            className="transition-transform duration-300 group-hover:scale-110"
+                        />
+                    </a>
                 </div>
             </motion.section>
 
             <motion.form
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5, delay: 0.2}}
                 onSubmit={handleSubmit}
                 className="mt-12 max-w-xl mx-auto space-y-6"
             >

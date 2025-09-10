@@ -58,7 +58,7 @@ export default function ProjectsPage() {
                 className="text-center"
             >
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">My Work</h1>
-                <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-4 text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
                     Here are some of the projects I&apos;ve worked on. Each one represents a unique challenge and a learning opportunity.
                 </p>
             </motion.section>
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        whileHover={{ y: -5 }} // <-- 1. Προσθέτουμε το hover effect
+                        whileHover={{ y: -5 }}
                         className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden flex flex-col group"
                     >
                         <div className="overflow-hidden">
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <h2 className="text-2xl font-bold">{project.title}</h2>
-                            <p className="mt-2 text-gray-600 dark:text-gray-300 flex-grow">{project.description}</p>
+                            <p className="mt-2 text-[var(--foreground)]/70 flex-grow">{project.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
                                     <span key={tag} className="bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>

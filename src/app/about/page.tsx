@@ -77,7 +77,7 @@ export default function AboutPage() {
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
                         A Bit About Me
                     </h1>
-                    <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+                    <p className="mt-4 text-lg text-[var(--foreground)]/70">
                         I am a final-year Applied Informatics student at the University of Macedonia, passionate about
                         building complete software solutions. With strong problem-solving skills and a commitment to
                         continuous learning, I enjoy tackling challenges and collaborating in team environments.
@@ -95,7 +95,7 @@ export default function AboutPage() {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.5}}
                         >
-                            <h3 className="text-xl font-semibold text-center text-gray-800 dark:text-gray-200 mb-6">{category.title}</h3>
+                            <h3 className="text-xl font-semibold text-center text-[var(--foreground)] mb-6">{category.title}</h3>
                             <div className="flex flex-wrap justify-center items-center gap-8">
                                 {category.skills.map((skill) => (
                                     <a
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
             <section className="mt-24 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter">Beyond the Code</h2>
-                <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-4 text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
                     When I&apos;m not typing away, you&apos;ll probably find me planning my next move in a game of chess,
                     a challenge I love for its strategic nature. I am also a fan of team sports and video games,
                     where cooperation and problem solving are key.
@@ -136,7 +136,7 @@ export default function AboutPage() {
 
             <section className="mt-24 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter">Let&apos;s Connect</h2>
-                <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-4 text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
                     I&apos;m always excited to discuss new projects or opportunities. Feel free to explore my work or get in
                     touch.
                 </p>
