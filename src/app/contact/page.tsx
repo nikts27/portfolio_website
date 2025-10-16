@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from "next/image";
 import clsx from "clsx";
@@ -9,10 +9,6 @@ import {Button} from "@/components/button";
 export default function ContactPage() {
     const [status, setStatus] = useState('');
     const [emailError, setEmailError] = useState('');
-
-    useEffect(() => {
-        document.title = 'Contact | Nikolaos Tsaridis';
-    }, []);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();

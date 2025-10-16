@@ -1,7 +1,5 @@
-// src/app/projects/page.tsx
 'use client';
 
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from "next/image";
 import {Button} from "@/components/button";
@@ -45,10 +43,6 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
-    useEffect(() => {
-        document.title = 'Projects | Nikolaos Tsaridis';
-    }, []);
-
     return (
         <div className="max-w-6xl mx-auto px-4 py-16">
             <motion.section

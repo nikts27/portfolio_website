@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {Button} from "@/components/button";
@@ -47,9 +46,6 @@ const skillCategories = [
 ];
 
 export default function AboutPage() {
-    useEffect(() => {
-        document.title = 'About | Nikolaos Tsaridis';
-    }, []);
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-16">
@@ -78,9 +74,12 @@ export default function AboutPage() {
                         A Bit About Me
                     </h1>
                     <p className="mt-4 text-lg text-[var(--foreground)]/70">
-                        I am a final-year Applied Informatics student at the University of Macedonia, passionate about
-                        building complete software solutions. With strong problem-solving skills and a commitment to
-                        continuous learning, I enjoy tackling challenges and collaborating in team environments.
+                        Recently graduated from the University of Macedonia with a
+                        degree in Applied Informatics, specializing in building complete
+                        software solutions. I possess strong problem-solving skills and a
+                        commitment to continuous learning. I am now focused on gaining
+                        valuable professional work experience, eager to tackle new
+                        challenges and contribute effectively within a team environment.
                     </p>
                 </motion.div>
             </section>

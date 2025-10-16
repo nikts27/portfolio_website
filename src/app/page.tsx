@@ -2,14 +2,9 @@
 
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {useEffect} from "react";
 import {Button} from "@/components/button";
 
 export default function Home() {
-  useEffect(() => {
-    document.title = 'Home | Nikolaos Tsaridis';
-  }, []);
-
   return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="max-w-4xl text-left p-8">
@@ -45,7 +40,7 @@ export default function Home() {
               className="mt-6 text-xl md:text-2xl text-[var(--foreground)]/70 max-w-2xl
              transition-colors duration-300 ease-in-out"
           >
-            Final-year Computer Science student passionate about software, frontend
+            Recently graduated Computer Science student passionate about software, frontend
             development and AI applications, based in Thessaloniki. Excited to start my
             professional journey.
           </motion.p>
