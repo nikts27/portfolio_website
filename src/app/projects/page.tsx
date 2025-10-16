@@ -39,6 +39,15 @@ const projects = [
         tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS'],
         image: '/projects/website.png',
         githubUrl: 'https://github.com/nikts27/portfolio_website'
+    },
+    {
+        title: 'Foodverse',
+        description: 'Collaborated on the development of a Java Swing‑based desktop\n' +
+            'application for food ordering, for the Software Development course. Focused on UX and smooth\n' +
+            'cross‑platform functionality.',
+        tags: ['Java', 'Java Swing', 'UX-UI'],
+        image: '/projects/foodverse.png',
+        githubUrl: 'https://github.com/food-verse/foodverse'
     }
 ];
 
